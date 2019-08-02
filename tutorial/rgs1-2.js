@@ -1,4 +1,4 @@
-//Your First React Hook
+//Your First React Component
 // jsdrops.com/rgs1.2
 
 function Button() {
@@ -23,10 +23,6 @@ function Button() {
 
     //or do an inline arrow function definition...
     return <button onClick={() => setCounter(counter + 1)}>{counter}</button>
-
-    // CHALLENGE. Start the counter at 5 and double the number on each click (5, 10, 20, 40, 80, ...)
-    // const [counter, setCounter] = useState(5)
-    // return <button onClick={() => setCounter(counter * 2)}>{counter}</button>
 }
 
 ReactDOM.render(

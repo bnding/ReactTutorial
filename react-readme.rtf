@@ -30,4 +30,53 @@
 returns an array with exactly two elements\
 \
 const [counter, setCounter] = useState()\
-	- destructuring feature to capture two variables in one line}
+	- destructuring feature to capture two variables in one line\
+\
+
+\f1\b\fs32 jsdrops.com/rgs1.4\
+
+\f0\b0\fs24 ReactDOM.render(\
+	
+\f1\b DOES NOT WORK. Each one of these elements get translated into a function call.\
+
+\f0\b0 	<Button /><Display />,\
+	document.getElementById(\'91mountNode)\
+)\
+\
+A few things you can do\'85\
+	\ul ARRAY (good solution ONLY when all the elements you\'92re rendering are coming from the same component in a dynamic way)\
+\ulnone 		[<Button />, <Display />]\
+\
+	\ul DIV\ulnone \
+		<div>\
+			<Button />\
+			<Display />\
+		</div>\
+	
+\f1\b If you don\'92t want a DOM Parent to be introduced, use <React.Fragment> instead of <div>\
+	Actually, you can just use an empty tag <> which will be interpreted as <React.Fragment>
+\f0\b0 \
+\
+
+\f1\b\fs32 jsdrops.com/rgs1.7\
+
+\f0\b0\fs24 React only updates anything that has been changed.\
+If we try to text something in the HTML, we will not be able to.\
+	Throwing away the whole DOM node on every tick and regenerating it.\
+\
+However, React will be able to let you update the text.\
+	Changing only the timestamp text\'85 Not the whole DOM node!\
+\
+
+\f1\b\fs32 jsdrops.com/rgs2.1\
+
+\f0\b0\fs24 Each react component must have a render() function.\
+\
+\
+\
+\
+\
+\
+\
+\
+}
